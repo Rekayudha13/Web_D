@@ -7,6 +7,9 @@
 <body>
 	<div class="container">
 		<div class="alert alert-info">Data Dosen</div>
+		<a href="data_dosen.php" class="btn btn-info">Add Data</a>
+		<br><br>
+
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -32,14 +35,17 @@
 						<td><?= $isi->nama_dosen; ?></td>
 						<td><?= $isi->alamat; ?></td>
 						<td>
-							<a href="" class="btn btn-danger">Delete</a>
-							<a href="" class="btn btn-warning">Edit</a>
-						</td>
-					</tr>
-				<?php } ?>
-			</tbody>
-		</table>
+							<a href="delete.php?nip=<?php echo $isi->nip; ?>"
+								class="btn btn-danger">Delete</a>
 
-	</div>
-</body>
-</html>
+								<a href="update.php?url-nip=<?php echo $isi->nip; ?>"
+									class="btn btn-warning">Edit</a>
+								</td>
+							</tr>
+						<?php } ?>
+					</tbody>
+				</table>
+
+			</div>
+		</body>
+		</html>

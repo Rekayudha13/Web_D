@@ -7,6 +7,8 @@
 <body>
 	<div class="container">
 		<div class="alert alert-info">Data Mahasiswa</div>
+		<a href="data_mahasiswa.php" class="btn btn-info">Add Data</a>
+		<br><br>
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -31,15 +33,19 @@
 						<td><?= $isi->nama_mahasiswa; ?></td>
 						<td><?= $isi->alamat; ?></td>
 						<td>
-							<a href="" class="btn btn-danger">Delete</a>
-							<a href="" class="btn btn-warning">Edit</a>
-						</td>
-					</tr>
-				<?php } ?>
-			</tbody>
+							
+							<a href="delete.php?nim=<?php echo $isi->nim; ?>"
+								class="btn btn-danger">Delete</a>
 
-		</table>
-	</div>
+								<a href="update.php?url-nim=<?php echo $isi->nim; ?>"
+									class="btn btn-warning">Edit</a>
+								</td>
+							</tr>
+						<?php } ?>
+					</tbody>
 
-</body>
-</html>
+				</table>
+			</div>
+
+		</body>
+		</html>
